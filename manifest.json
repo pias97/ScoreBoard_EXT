@@ -1,13 +1,13 @@
 {
   "manifest_version": 3,
-  "name": "WC26 Live — BD Time",
-  "version": "1.1.0",
-  "description": "FIFA World Cup 2026 live scores, goal scorers & stats. Kickoffs in Bangladesh time.",
+  "name": "What's the Score",
+  "version": "1.2.0",
+  "description": "Live FIFA World Cup 2026 scores, goal alerts & stats — kickoffs in Bangladesh time.",
   "permissions": ["alarms", "storage"],
   "host_permissions": ["https://site.api.espn.com/*"],
   "action": {
     "default_popup": "popup.html",
-    "default_title": "World Cup 2026 Live"
+    "default_title": "What's the Score — Live"
   },
   "background": { "service_worker": "background.js" },
   "content_scripts": [

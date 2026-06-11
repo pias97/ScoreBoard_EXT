@@ -1,4 +1,4 @@
-# 🏆 WC26 Live — BD Time
+# 🏆 What's the Score
 
 > **Live FIFA World Cup 2026 scores, goal alerts & match stats — kickoffs shown in Bangladesh time.**
 

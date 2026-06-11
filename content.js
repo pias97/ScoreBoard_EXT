@@ -1,8 +1,8 @@
 (function () {
   // top frame only, once per page, respect per-session hide
   if (window.top !== window) return;
-  if (document.getElementById("wc26-host")) return;
-  try { if (sessionStorage.getItem("wc26-hidden") === "1") return; } catch {}
+  if (document.getElementById("wts-host")) return;
+  try { if (sessionStorage.getItem("wts-hidden") === "1") return; } catch {}
 
   const TZ = "Asia/Dhaka";
 
@@ -153,7 +153,7 @@
   `;
 
   const host = document.createElement("div");
-  host.id = "wc26-host";
+  host.id = "wts-host";
   const root = host.attachShadow({ mode: "open" });
   try {
     const sheet = new CSSStyleSheet();
@@ -168,7 +168,7 @@
     <div class="wrap">
       <div class="panel" id="panel" hidden>
         <div class="ph">
-          <div><div class="ph-t">World Cup 2026</div><div class="ph-s">bangladesh time</div></div>
+          <div><div class="ph-t">What's the Score</div><div class="ph-s">bangladesh time · live</div></div>
           <div class="ph-actions">
             <button class="x demo" id="demo" title="Preview a goal alert">⚡</button>
             <button class="x" id="collapse" title="Minimize">—</button>
@@ -177,7 +177,7 @@
         <div class="goals" id="goals"></div>
         <div class="pb" id="pb"></div>
       </div>
-      <button class="fab" id="fab" title="World Cup 2026 — live">
+      <button class="fab" id="fab" title="What's the Score — live">
         <svg class="ball" viewBox="0 0 24 24" aria-hidden="true">
           <circle cx="12" cy="12" r="11" fill="#fafafa"/>
           <g fill="#0e0e11">
@@ -196,7 +196,7 @@
             <line x1="8.86" y1="10.98" x2="6.82" y2="10.32"/>
           </g>
         </svg>
-        <span class="cap" id="cap">World Cup</span>
+        <span class="cap" id="cap">Live</span>
         <span class="badge" id="badge" hidden></span>
       </button>
     </div>`;
@@ -370,7 +370,7 @@
     } else {
       badge.hidden = true;
       cap.className = "cap";
-      cap.textContent = "World Cup";
+      cap.textContent = "Live";
     }
 
     pb.innerHTML =
