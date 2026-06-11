@@ -3,7 +3,6 @@ const BD_TZ = "Asia/Dhaka";
 
 const $ = (s) => document.querySelector(s);
 
-/* ---------- goal notifications (popup-only) ---------- */
 const esc = (s) =>
   String(s ?? "").replace(/[&<>"']/g, (c) =>
     ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
@@ -203,4 +202,4 @@ async function load() {
 $("#refresh").addEventListener("click", () => { load(); loadGoals(); });
 load();
 loadGoals();
-setInterval(load, 30000); // auto-refresh while popup open
+setInterval(load, 30000);

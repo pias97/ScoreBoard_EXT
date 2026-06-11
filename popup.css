@@ -1,11 +1,11 @@
 :root {
-  --bg:      #09090b;   /* zinc-950 */
+  --bg:      #09090b;
   --surface: #131316;
   --surface-2: #1c1c20;
   --hair:    rgba(255, 255, 255, 0.07);
   --hair-2:  rgba(255, 255, 255, 0.04);
   --ink:     #fafafa;
-  --ink-2:   #a1a1aa;   /* zinc-400 */
+  --ink-2:   #a1a1aa;
   --ink-3:   #5e5e66;
   --live:    #f87171;   /* the only accent — used for LIVE */
 }
@@ -23,7 +23,6 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* ---------- header ---------- */
 header {
   display: flex; align-items: center; justify-content: space-between;
   padding: 16px 16px 14px;
@@ -49,7 +48,6 @@ h1 {
 #refresh.spin { animation: spin .6s cubic-bezier(.4,0,.2,1); }
 @keyframes spin { to { transform: rotate(360deg); } }
 
-/* ---------- goal notifications ---------- */
 .goals { padding: 0; }
 .goals:not(:empty) { padding-top: 6px; }
 
@@ -100,7 +98,6 @@ h1 {
   .goal-card .gb { animation: none; }
 }
 
-/* ---------- layout ---------- */
 main { padding: 2px 12px 6px; }
 .loading, .empty {
   text-align: center; color: var(--ink-3);
@@ -124,7 +121,6 @@ main { padding: 2px 12px 6px; }
   100% { box-shadow: 0 0 0 0 rgba(248,113,113,0); }
 }
 
-/* ---------- match card ---------- */
 .match {
   background: var(--surface);
   border: 1px solid var(--hair-2);
@@ -179,7 +175,6 @@ main { padding: 2px 12px 6px; }
 }
 @keyframes pulse { 50% { opacity: .3; } }
 
-/* ---------- scorers ---------- */
 .scorers {
   margin-top: 11px; padding-top: 11px;
   border-top: 1px solid var(--hair-2);
@@ -195,7 +190,6 @@ main { padding: 2px 12px 6px; }
 }
 .scorers .og { color: var(--live); opacity: .85; }
 
-/* ---------- stats ---------- */
 .stats { margin-top: 11px; padding-top: 11px; border-top: 1px solid var(--hair-2); }
 .stat-row {
   display: grid; grid-template-columns: 28px 1fr 28px;
@@ -212,7 +206,6 @@ main { padding: 2px 12px 6px; }
 .bar .h { background: var(--ink); border-radius: 3px; }
 .bar .a { background: var(--ink-3); margin-left: auto; border-radius: 3px; }
 
-/* ---------- footer ---------- */
 footer {
   display: flex; justify-content: space-between; align-items: center;
   padding: 11px 16px 14px; font-size: 10px; color: var(--ink-3);

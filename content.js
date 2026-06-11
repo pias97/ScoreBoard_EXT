@@ -152,7 +152,6 @@
   .goal-card .gtime { font-size: 9px; color: var(--ink3); flex-shrink: 0; align-self: flex-start; }
   `;
 
-  // ---- build shadow root ----
   const host = document.createElement("div");
   host.id = "wc26-host";
   const root = host.attachShadow({ mode: "open" });
@@ -208,7 +207,6 @@
   const panel = $("panel"), pb = $("pb"), fab = $("fab");
   const cap = $("cap"), badge = $("badge"), goalsBox = $("goals");
 
-  // ---- goal alerts (shown inside this panel only) ----
   const BALL = `<svg class="gb" viewBox="0 0 24 24" aria-hidden="true">
     <circle cx="12" cy="12" r="11" fill="#fafafa"/>
     <g fill="#0e0e11">
@@ -269,7 +267,6 @@
     renderGoals();
   });
 
-  // ---- open / close: click ball to open (bouncy), move mouse away to collapse ----
   let open = false;
   function openPanel() {
     if (open) return;
@@ -297,9 +294,8 @@
   }
   fab.addEventListener("click", openPanel);
   $("collapse").addEventListener("click", closePanel);
-  wrap.addEventListener("mouseleave", closePanel); // hover off → collapse
+  wrap.addEventListener("mouseleave", closePanel);
 
-  // ---- render ----
   const flag = (t) => (t.logo ? `<img class="fl" src="${esc(t.logo)}" alt="">` : "");
 
   function statsBlock(stats) {
@@ -387,7 +383,6 @@
     wireFlags(pb);
   }
 
-  // ---- storage sync (scoreboard + goal alerts, both shown in this panel) ----
   chrome.storage.local.get(["scoreboard", "goalLog"], (r) => {
     render(r.scoreboard);
     logGoals = r.goalLog || [];
